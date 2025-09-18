@@ -1,0 +1,163 @@
+<html lang="fa" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ارتباط با ما | Dook-Mode</title>
+
+  <!-- فونت فارسی گوگل -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#34d1ff;          /* رنگ نئون لوگو و دکمه‌ها */
+      --glass-bg:rgba(255,255,255,.08);
+      --glass-border:rgba(255,255,255,.25);
+      --radius:1.6rem;
+    }
+
+    /* پس‌زمینه‌ی ستاره‌ای/عکس دلخواه */
+
+    body{
+      margin:0;
+      min-height:1dvh;
+      font-family:"Vazirmatn",sans-serif;
+      color:#000000;
+      display:grid;
+      place-content:center;
+      padding:1rem;
+      background:#041426 url("background.jpg") center/cover fixed; /* تصویر خودتو جایگزین کن */
+      overflow:hidden;
+    }
+    /* روشنایی بالای کارت، فقط تزئینی */
+    body::before{
+      content:"";
+      position:fixed;
+      top:-20%;
+      left:50%;
+      width:60vmax;
+      height:60vmax;
+      translate:-50% 0;
+      background:radial-gradient(closest-side at 50% 0%,rgba(8, 84, 107, 0.35),transparent 70%);
+      pointer-events:none;
+      filter:blur(120px);
+    }
+
+    /* کارت شیشه‌ای */
+    .card{
+      width:min(420px,90vw);
+      padding:2.8rem 2rem 2.4rem;
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      border-radius:var(--radius);
+      backdrop-filter:blur(22px) saturate(150%);
+      -webkit-backdrop-filter:blur(22px) saturate(150%);
+      box-shadow:0 10px 40px rgba(0,0,0,.6);
+      text-align:center;
+    }
+
+    /* لوگو SVG */
+    .logo{
+      width:300px;
+      height:160px;
+      margin: auto 5px 20px ;
+      /* افکت نئون */
+
+    }
+
+    h1{
+      font-size:1.8rem;
+      margin:0 0 .25rem;
+      font-weight:600;
+    }
+    p.lead{margin:.25rem 0 1.6rem;font-size:.925rem;color:#000000;}
+
+    /* لیست آدرس و تلفن */
+    .info{font-size:1rem;line-height:1.9;color:#000000;}
+    .phone{
+      display:block;
+      color:#000000;
+      font-weight:600;
+      text-decoration:none;
+      margin:.3rem 0;
+    }
+
+    /* دکمه‌های شبکه‌اجتماعی */
+    .btn{
+      display:flex;align-items:center;justify-content:center;
+      gap:.5rem;
+      margin:.4rem 0;
+      padding:.7rem 1rem;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:calc(var(--radius)/1.8);
+      color:#282829;
+      font-size:.94rem;
+      text-decoration:none;
+      transition:.25s;
+    }
+    .btn:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+    .btn svg{width:20px;height:20px;fill:var(--accent);flex-shrink:0;}
+
+    /* خط جداکننده گِرد شیشه‌ای */
+    .separator{
+      position:relative;margin:1.6rem 0;
+      height:1px;background:rgba(255,255,255,.15);
+    }
+    .separator::before{
+      content:"یا";
+      position:absolute;top:50%;left:50%;translate:-50% -50%;
+      background:var(--glass-bg);
+      padding:0 .6rem;border-radius:1rem;
+      font-size:.8rem;color:#000000;
+    }
+
+    /* واکنش‌گرا: فونت و فاصله‌ها کوچیک‌تر روی موبایل خیلی باریک */
+    @media(max-width:350px){
+      h1{font-size:1.5rem}
+      .btn{font-size:.85rem;padding:.6rem .9rem}
+    }
+       h1{
+  
+    font-size: 26px;
+    padding-bottom: 20px;
+   }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- لوگوی SVG خودت رو همین‌جا بنداز (فایل logo.svg یا کد inline) -->
+    <img src="logo.png" alt="لوگو" class="logo">
+
+    <h1>مرکز آموزشی استاد عطایی شعبه چهارم</h1>
+    <p class="lead">برای ارتباط با ما از روش‌های زیر استفاده کنید.</p>
+
+    <div class="info">
+      <p><strong>آدرس:</strong> هرات، سرک باغ آزادی</p>
+      <p> جوار شفاخانه لقمان حکیم.</p>
+    </div>
+
+    <div class="info">
+      <strong>تماس:</strong>
+      <a class="phone" href="tel:0797074507">0797074507</a>
+    </div>
+
+    <div class="separator"></div>
+
+    <!-- دکمه اینستاگرام -->
+    <a class="btn" href="https://www.instagram.com/ostadatayeelearningcenter?igsh=ejUxNThkamxkYXg2" target="_blank" rel="noopener">
+      <!-- آیکن اینستاگرام به‌صورت SVG -->
+      <svg viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.75-3a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"></path></svg>
+      اینستاگرام
+    </a>
+
+    <!-- دکمه تلگرام -->
+    <a class="btn" href="https://t.me/information181899" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="m2.01 12.35 3.91 1.58 1.51 4.65a.94.94 0 0 0 1.45.47l2.09-1.73a.94.94 0 0 1 .96-.13l3.77 1.53a.94.94 0 0 0 1.29-.63l3.01-12.11a.94.94 0 0 0-1.25-1.11l-17.5 6.5a.94.94 0 0 0 .01 1.78Zm5.06.75 9.66-5.79-7.38 6.46a.47.47 0 0 0 .03.71l3.02 2.47-4.02-1.64a.94.94 0 0 1-.55-.56l-.76-2.65Z"></path></svg>
+      تلگرام
+    </a>
+
+  </div>
+
+
+</body></html>
